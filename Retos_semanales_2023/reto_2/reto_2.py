@@ -9,35 +9,35 @@
 
 # creamos una funcion constructora del lenguaje leet (la construimos en base a un diccionario donde las llaves son las letras y los valores su correspondiente caracter leet)
 
-def leet()->dict:
-  dicc= {}
-  while True:
+# def leet()->dict:
+#   dicc= {}
+#   while True:
 
-    letra= input('Ingresa la letra: ').lower()
-    if letra == 'exit':
-      break
-    p= input('Ingresa el caracter: ')
-    dicc.setdefault(letra,p)
+#     letra= input('Ingresa la letra: ').lower()
+#     if letra == 'exit':
+#       break
+#     p= input('Ingresa el caracter: ')
+#     dicc.setdefault(letra,p)
 
-  return dicc
+#   return dicc
 
 
-leet= leet() ## llamamos la funcion para construir el diccionario y tenerlo a disposicion para utilizarlo
+# leet= leet() ## llamamos la funcion para construir el diccionario y tenerlo a disposicion para utilizarlo
 
-# creamos el convertidor
-def convertidor_leet()->str:
-  promp= input('Ingresa una frase o palabra: ')
-  l= leet
-  new_frase= []
-  for letra in promp:
-    if letra == ' ':
-        new_frase.append(letra)
-        continue
-    else:
-      letra= l[letra]
-      new_frase.append(letra)
+# # creamos el convertidor
+# def convertidor_leet()->str:
+#   promp= input('Ingresa una frase o palabra: ')
+#   l= leet
+#   new_frase= []
+#   for letra in promp:
+#     if letra == ' ':
+#         new_frase.append(letra)
+#         continue
+#     else:
+#       letra= l[letra]
+#       new_frase.append(letra)
   
-  return ''.join(new_frase)
+#   return ''.join(new_frase)
 
 
 
@@ -49,7 +49,7 @@ def convertidor_leet()->str:
 def leet()->dict:
 
   try:
-    f= open('dicc_leet.txt', 'r')
+    f= open('Retos_semanales_2023/reto_2/dicc_leet.txt', 'r')
     print('Ya existe un diccionario')
     return
   except FileNotFoundError:
@@ -67,25 +67,25 @@ def convertidor_leet()->str:
     new_frase= []
     promp= input('Ingresa una frase o palabra: ').lower()
     
-    with open('dicc_leet.txt', 'r') as f:
+    with open('Retos_semanales_2023/reto_2/dicc_leet.txt', 'r') as f:
         dicc= {}
         temp= f.read().split('\n')
         temp.pop(-1)
         temp= [x.split(':') for x in temp]
-
     for key,value in temp:
         dicc.setdefault(key, value)
 
+    new_frase= []
     for letra in promp:
         if letra == ' ':
-            print(letra,end= '')
+            new_frase.append(letra)
             continue
         else:
             letra= dicc[letra]
-            print(letra, end= '', )
+            new_frase.append(letra)
 
   
-    return
+    return ''.join(new_frase)
 
 #----------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ def convertidor_leet()->str:
 
 def test():
   # leet()
-  # convertidor_leet()
+  print(convertidor_leet())
   return
 
 if __name__ == '__main__':
