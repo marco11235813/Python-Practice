@@ -1,11 +1,19 @@
-# 2-
-#  * Escribe un programa que reciba un texto y transforme lenguaje natural a
-#  * "lenguaje hacker" (conocido realmente como "leet" o "1337"). Este lenguaje
-#  *  se caracteriza por sustituir caracteres alfanuméricos.
-#  * - Utiliza esta tabla (https://www.gamehouse.com/blog/leet-speak-cheat-sheet/) 
-#  *   con el alfabeto y los números en "leet".
-#  *   (Usa la primera opción de cada transformación. Por ejemplo "4" para la "a")
+"""2-
+ * Escribe un programa que reciba un texto y transforme lenguaje natural a
+ * "lenguaje hacker" (conocido realmente como "leet" o "1337"). Este lenguaje
+ *  se caracteriza por sustituir caracteres alfanuméricos.
+ * - Utiliza esta tabla (https://www.gamehouse.com/blog/leet-speak-cheat-sheet/) 
+ *   con el alfabeto y los números en "leet".
+ *   (Usa la primera opción de cada transformación. Por ejemplo "4" para la "a")\n\n"""
 
+
+
+
+
+#----------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------
+"""Marco Caro PYandDT"""
 
 # creamos una funcion constructora del lenguaje leet (la construimos en base a un diccionario donde las llaves son las letras y los valores su correspondiente caracter leet)
 
@@ -43,8 +51,6 @@
 
 
 # otra manera
-
-
 # en este caso la funcion leet crea un fichero con las letras y su correspondiente caracter leet, por lo que se correria la funcion una sola vez
 def leet()->dict:
 
@@ -87,17 +93,13 @@ def convertidor_leet()->str:
   
     return ''.join(new_frase)
 
-#----------------------------------------------------------------------------------------------------------
-#----------------------------------------------------------------------------------------------------------
-#----------------------------------------------------------------------------------------------------------
-
-def test():
+def main():
   # leet()
   print(convertidor_leet())
   return
 
 if __name__ == '__main__':
-  test()
+  main()
 
 
 
@@ -107,3 +109,7 @@ if __name__ == '__main__':
 # --Utilizamos el segundo valor leet para la letra 'i' ya que el primer caracter tanto de la letra 'i' como de la letra 'l' era el mismo y para evitar errores de lectura y agilizar la misma se recurrio a esto.
 # --La funcion leet() en su segunda version, crea un archivo tipo .txt, por lo que con llamar una vez a la funcion ya deja el archivo con las equivalencias de letras/caracteres creado y listo para su uso posterior
 #  es decir, no se utiliza en el futuro (salvo casos excepcionales como el que se borre el archivo que contiene las equivalencias)
+
+#----------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------
