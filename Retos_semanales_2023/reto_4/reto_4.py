@@ -1,4 +1,4 @@
- """4-Escribe un programa que sea capaz de generar contraseñas de forma aleatoria.
+"""4-Escribe un programa que sea capaz de generar contraseñas de forma aleatoria.
  * Podrás configurar generar contraseñas con los siguientes parámetros:
  * - Longitud: Entre 8 y 16.
  * - Con o sin letras mayúsculas.
@@ -57,6 +57,11 @@ def generador_contraseña()->str:
     print(''.join(contraseña))
     return 
 
+
+def main():
+    
+    password= generador_contraseña()
+    print(password)
 #----------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------------

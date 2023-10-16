@@ -95,7 +95,8 @@ def convertidor_leet()->str:
 
 def main():
   # leet()
-  print(convertidor_leet())
+  convertir= convertidor_leet()
+  print(convertir)
   return
 
 if __name__ == '__main__':

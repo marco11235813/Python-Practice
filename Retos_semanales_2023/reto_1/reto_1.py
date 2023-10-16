@@ -39,7 +39,9 @@ def convertidor()->list:
 
 
 def main():
-    print(convertidor())
+
+    convertir= convertidor()
+    print(convertir)
     return 
 
 if __name__ == '__main__':
