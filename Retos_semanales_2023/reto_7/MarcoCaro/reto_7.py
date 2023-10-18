@@ -57,19 +57,25 @@ def manos()->list:
 def juego()->str:
     
     registro, rondas= manos()
+    print(rondas)
     temp= combinaciones_ganadoras()
+    print(temp)
     jugadores= ['Player1', 'Player2']
-    resultados= []
     for mano in rondas:
         if mano[0] == mano[1]:
             print(f'Mano: {mano}----> Tie')
         else:
             for tup in temp:
-                if mano == tup[1] or mano == tup[1][::-1]:
-                   print(f'Mano: {mano}----> Ganador {jugadores[tup[0]]}')
+                if mano == tup[1]:
+                    print(f'Mano: {mano}---->Ganador {jugadores[tup[0]]}')
+                elif mano == tup[1][::-1]:
+                    if tup[0] == 1:
+                        print(f'Mano: {mano}---->Ganador {jugadores[0]}')
+                    else:
+                        print(f'Mano: {mano}---->Ganador {jugadores[1]}')
                 else:
                     continue
-    
+
     return '-' * 80
 
 
