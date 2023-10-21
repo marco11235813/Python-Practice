@@ -9,7 +9,9 @@
 """Marco Caro PYandDT\n"""
 
 def generador():
-
+    """Esta funcion es un pseudogenerador de numeros entre 0 y 100
+    toma como semilla la referencia el valor de la variable mili, el cual es datetime.now (el tiempo actual en el cual 
+    declaramos la variable en el transcurso de la ejecucion de la funcion)"""
     import datetime as dt #utilizamos la libreria datetime
 
     mili= dt.datetime.now() # utilizamos el metodo now que nos devuelve el tiempo actual hasta con milisegundos
